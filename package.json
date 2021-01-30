@@ -16,6 +16,9 @@
     "video"
   ],
   "author": "shiguanghai",
+  "files": [
+    "bin"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shiguanghai/vuepress-plugin-core-video-player/issues"
