@@ -3,8 +3,8 @@
 ## Install
 
 ```shell
-npm install vuepress-plugin-core-video-player -D
-# OR yarn add vuepress-plugin-core-video-player -D
+npm install -D vuepress-plugin-core-video-player
+# OR yarn add -D vuepress-plugin-core-video-player
 ```
 
 ## Use
@@ -13,10 +13,10 @@ npm install vuepress-plugin-core-video-player -D
 ```js
 module.exports = {
   plugins: [
-	'vuepress-plugin-core-video-player-core',
-	{
-      lang: 'zh-CN',
-      resolution: '1080p'
+	  'vuepress-plugin-core-video-player-core',
+	  {
+      lang: 'zh-CN', // en/jp
+      resolution: '720p' //360p/720p/1080p
     }
   ]
 }
