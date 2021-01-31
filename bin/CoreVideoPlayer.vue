@@ -97,6 +97,7 @@ export default {
       validator: function (value) {
         return ["fixed", "auto", false, true].indexOf(value) !== -1
       },
+      default: "auto",
     },
     autoplay: {
       type: Boolean, //自动播放视频
