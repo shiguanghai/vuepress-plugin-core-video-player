@@ -53,62 +53,60 @@
 </template>
 <script>
 import VueCoreVideoPlayer from "vue-core-video-player";
-import HLSCore from '@core-player/playcore-hls
+import HLSCore from "@core-player/playcore-hls";
 import Vue from "vue";
+
+Vue.use(VueCoreVideoPlayer, {
+  lang, // 定义播放器语言
+});
 
 export default {
   name: "corevideoplayer",
   props: {
     src: {
-      type: [String, Array],
+      type: [String, Array],   //视频链接
       require: true,
     },
     muted: {
       type: Boolean,
-      default: false, //默认不静音
+      default: false, //设置为 true, 视频会静音
     },
     cover: {
-      type: String,
+      type: String, //显示视频的封面，如果设置 autoplay，自动播放成功后，不会显示
     },
     volume: {
       //无法控制
-      type: Number,
+      type: Number, //控制视频音量(0-1)
     },
     preload: {
       validator: function (value) {
-        return ["none", "metadata", "metadata "].indexOf(value) !== -1;
+        return ["none", "metadata", "auto "].indexOf(value) !== -1; //'none' 表示不会预加载视频; 'metadata' 表示只加载视频 metadata 信息部分
       },
     },
     loop: {
-      type: Boolean,
+      type: Boolean, //会循环播放当前视频
     },
     logo: {
-      type: String,
+      type: String, //显示播放器的 logo
     },
     title: {
-      type: String,
+      type: String, //展示视频的标题，方便 SEO
     },
     controls: {
-      type: [Boolean, String],
+      type: [Boolean, String], //可以用来控制底部控制栏的显示隐藏
       validator: function (value) {
         return ["fixed", "auto", false, true].indexOf(value) !== -1;
       },
     },
     autoplay: {
-      type: Boolean,
+      type: Boolean, //自动播放视频
       default: false,
     },
   },
-  data () {
+  data() {
     return {
-      HLSCore
-    }
-  }
-  mounted() {
-    Vue.use(VueCoreVideoPlayer, {
-      lang: lang, // 语言
-      resolution: resolution, // 清晰度
-    });
+      HLSCore,   //hls插件解码
+    };
   },
 };
 </script>
