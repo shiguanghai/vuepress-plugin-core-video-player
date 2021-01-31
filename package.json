@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-core-video-player",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "A Lightweight Video Player For VuePress.",
   "main": "index.js",
   "scripts": {
