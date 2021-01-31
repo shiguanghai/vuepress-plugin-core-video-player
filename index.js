@@ -1,6 +1,6 @@
 const { resolve } = require('path')
 
-module.exports = (options, context) => {
+module.exports = (options, context) => ({
   define () {
     const { lang, resolution } = options
     return {
@@ -10,4 +10,4 @@ module.exports = (options, context) => {
   name: 'vuepress-plugin-core-video-player',
   enhanceAppFiles: resolve(__dirname, './bin/enhanceAppFile.js'),
   //globalUIComponents: 'corevideoplayer'
-}
+})
