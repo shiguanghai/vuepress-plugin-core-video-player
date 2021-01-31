@@ -24,7 +24,7 @@
     "url": "https://github.com/shiguanghai/vuepress-plugin-core-video-player/issues"
   },
   "homepage": "https://github.com/shiguanghai/vuepress-plugin-core-video-player#readme",
-  "devDependencies": {
+  "dependencies": {
     "vue-core-video-player": "^0.2.0"
   }
 }
