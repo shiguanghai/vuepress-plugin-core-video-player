@@ -52,9 +52,9 @@
   </div>
 </template>
 <script>
-import VueCoreVideoPlayer from "vue-core-video-player"
-import HLSCore from "@core-player/playcore-hls"
-import Vue from "vue"
+import VueCoreVideoPlayer from "vue-core-video-player";
+import HLSCore from "@core-player/playcore-hls";
+import Vue from "vue";
 
 Vue.use(VueCoreVideoPlayer, {
   lang, // 定义播放器语言
@@ -105,8 +105,8 @@ export default {
   },
   data() {
     return {
-      HLSCore, //hls插件解码
-    }
-  }
+      HLSCore,   //hls插件解码
+    };
+  },
 };
 </script>
