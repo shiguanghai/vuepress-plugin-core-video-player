@@ -9,5 +9,5 @@ module.exports = (options, context) => {
   },
   name: 'vuepress-plugin-core-video-player',
   enhanceAppFiles: resolve(__dirname, './bin/enhanceAppFile.js'),
-  globalUIComponents: 'corevideoplayer'
+  //globalUIComponents: 'corevideoplayer'
 }
