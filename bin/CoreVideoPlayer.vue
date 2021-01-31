@@ -52,9 +52,9 @@
   </div>
 </template>
 <script>
-import VueCoreVideoPlayer from "vue-core-video-player";
-import HLSCore from '@core-player/playcore-hls
-import Vue from "vue";
+import VueCoreVideoPlayer from "vue-core-video-player"
+import HLSCore from "@core-player/playcore-hls"
+import Vue from "vue"
 
 export default {
   name: "corevideoplayer",
@@ -76,8 +76,8 @@ export default {
     },
     preload: {
       validator: function (value) {
-        return ["none", "metadata", "metadata "].indexOf(value) !== -1;
-      },
+        return ["none", "metadata", "metadata "].indexOf(value) !== -1
+      }
     },
     loop: {
       type: Boolean,
@@ -91,7 +91,7 @@ export default {
     controls: {
       type: [Boolean, String],
       validator: function (value) {
-        return ["fixed", "auto", false, true].indexOf(value) !== -1;
+        return ["fixed", "auto", false, true].indexOf(value) !== -1
       },
     },
     autoplay: {
@@ -103,12 +103,12 @@ export default {
     return {
       HLSCore
     }
-  }
+  },
   mounted() {
     Vue.use(VueCoreVideoPlayer, {
       lang: lang, // 语言
       resolution: resolution, // 清晰度
-    });
-  },
-};
+    })
+  }
+}
 </script>
