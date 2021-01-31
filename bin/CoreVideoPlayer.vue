@@ -11,6 +11,7 @@
       :title="title"
       :controls="controls"
       :autoplay="autoplay"
+      :core="core ? HLSCore : ''"
       @canplay="$emit('canplay')"
       @canplaythrough="$emit('canplaythrough')"
       @core_to_mp4="$emit('core_to_mp4')"
@@ -52,6 +53,7 @@
 </template>
 <script>
 import VueCoreVideoPlayer from "vue-core-video-player";
+import HLSCore from '@core-player/playcore-hls
 import Vue from "vue";
 
 export default {
@@ -97,6 +99,11 @@ export default {
       default: false,
     },
   },
+  data () {
+    return {
+      HLSCore
+    }
+  }
   mounted() {
     Vue.use(VueCoreVideoPlayer, {
       lang: lang, // 语言
