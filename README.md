@@ -4,7 +4,7 @@
 
 **A Lightweight Video Player For VuePress.**
 
-[View Demo](#)
+[View Demo](https://shiguanghai.top/blogs/other/coreplayer.html)
 
 ## Install
 
@@ -40,6 +40,11 @@ module.exports = {
   :autoplay=true
   :muted=false
   :loop=true>
+</corevideoplayer>
+
+# Or
+
+<corevideoplayer src="https://media.vued.vanthink.cn/sparkle_your_name_am720p.webm">
 </corevideoplayer>
 ```
 

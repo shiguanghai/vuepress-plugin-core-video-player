@@ -51,15 +51,11 @@
   </div>
 </template>
 <script>
-import VueCoreVideoPlayer from "vue-core-video-player"
+
 import Vue from "vue"
 
-Vue.use(VueCoreVideoPlayer, {
-  lang // 定义播放器语言
-})
-
 export default {
-  // name: "corevideoplayer",
+  name: "corevideoplayer",
   props: {
     src: {
       type: [String, Array], // 视频链接
@@ -106,6 +102,14 @@ export default {
       type: Boolean, // 自动播放视频
       default: false
     }
+  },
+  mounted () {
+    import('vue-core-video-player').then(module => {
+      this.VueCoreVideoPlayer = module.default
+      Vue.use(this.VueCoreVideoPlayer, {
+        lang // 定义播放器语言
+      })
+    })
   }
 }
 </script>
