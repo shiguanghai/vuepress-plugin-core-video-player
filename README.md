@@ -19,10 +19,12 @@ npm install -D vuepress-plugin-core-video-player
 ```js
 module.exports = {
   plugins: [
-    'vuepress-plugin-core-video-player',
-    {
-      lang: 'zh-CN', // zh-CN/en/jp/other language json
-    }
+    [
+      'vuepress-plugin-core-video-player',
+      {
+        lang: 'zh-CN', // zh-CN/en/jp/other language json
+      }
+    ]
   ]
 }
 ```
